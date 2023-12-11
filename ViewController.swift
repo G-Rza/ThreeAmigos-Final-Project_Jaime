@@ -7,10 +7,12 @@
 import UIKit
 import CoreML
 import NaturalLanguage
+import AVFoundation
 
 class ViewController: UIViewController {
 
-    let model = TextClassifier()
+    let model = try! YourTrainedTextClassifier(configuration: MLModelConfiguration())
+    let synthesizer = AVSpeechSynthesizer()
 
     // Function to classify text using CoreML
     func classifyText(_ text: String) {
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
             let prediction = try model.prediction(text: text)
             handleClassificationResult(prediction.label)
         } catch {
-            print("Error in classification: \(error)")
+            handleError(error)
         }
     }
 
@@ -28,11 +30,11 @@ class ViewController: UIViewController {
         case "timer":
             handleTimerInput("example input for timer")
         case "reminder":
-            // Handle reminder logic
+            handleReminderInput("example input for reminder")
         case "note":
-            // Handle note logic
+            handleNoteInput("example input for note")
         default:
-            // Handle unknown input logic
+            speakOutput("Unknown input. Please provide valid input.")
         }
     }
 
@@ -89,5 +91,12 @@ class ViewController: UIViewController {
         // For example, you can use regular expressions or other parsing techniques
         return 10 // Replace with the actual extracted time
     }
+
+    // Bryce's TTS integration function
+    func speakOutput(_ output: String) {
+        let utterance = AVSpeechUtterance(string: output)
+        synthesizer.speak(utterance)
+    }
 }
+
 
