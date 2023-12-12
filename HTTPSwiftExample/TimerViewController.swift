@@ -26,6 +26,12 @@ class TimerViewController: UIViewController {
         updateTimerLabel()
         countdownPicker.isHidden = false  // Show picker initially
     }
+    
+    public func setAndStartTimer(_ duration: Int){
+        remainingTime = duration * 60
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
 
     @IBAction func startButtonTapped(_ sender: UIButton) {
         startTimer()
