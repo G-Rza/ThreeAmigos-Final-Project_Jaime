@@ -112,6 +112,5 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         guard !note.isEmpty else { return }
         notes.append(note)
         UserDefaults.standard.set(notes, forKey: notesKey)
-        tableView.reloadData()
     }
 }

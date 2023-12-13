@@ -8,56 +8,49 @@
 
 import UIKit
 
-
+@available(iOS 15.0, *)
 class TimerViewController: UIViewController {
 
-    
+    // MARK: - IBOutlets/Properties/ViewLoad
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var countdownPicker: UIDatePicker!  // Date picker to set countdown time
 
     private var timer: Timer?
-    private var remainingTime: Int = 0  // Time in seconds for countdown
+    private var remainingTime: Int = 0
+    private let timerStartTimeKey = "timerStartTime"
+    private let timerDurationKey = "timerDuration"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        stopButton.layer.cornerRadius = stopButton.bounds.size.height / 2
+        resetButton.layer.cornerRadius = resetButton.bounds.size.height / 2
+
         updateTimerLabel()
-        countdownPicker.isHidden = false  // Show picker initially
+        checkAndRestartTimerIfNeeded()
     }
     
-    public func setAndStartTimer(_ duration: Int){
-        remainingTime = duration * 60
+    // MARK: - Timer Functions and Button Functions
+
+    func setAndStartTimer(_ duration: Int){
+        remainingTime = duration
         timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-    }
-
-    @IBAction func startButtonTapped(_ sender: UIButton) {
-        startTimer()
-        countdownPicker.isHidden = true  // hide picker when timer starts
     }
 
     @IBAction func stopButtonTapped(_ sender: UIButton) {
         stopTimer()
-        countdownPicker.isHidden = false
     }
 
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         resetTimer()
-        countdownPicker.isHidden = false  // show picker again when timer is reset
-    }
-
-    private func startTimer() {
-        _ = Int(countdownPicker.countDownDuration)
-        remainingTime = Int(countdownPicker.countDownDuration)
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
 
     private func stopTimer() {
         timer?.invalidate()
-        countdownPicker.isHidden = false
+        UserDefaults.standard.removeObject(forKey: timerStartTimeKey)
+        UserDefaults.standard.removeObject(forKey: timerDurationKey)
     }
 
     private func resetTimer() {
@@ -66,21 +59,40 @@ class TimerViewController: UIViewController {
         updateTimerLabel()
     }
 
+    private func checkAndRestartTimerIfNeeded() {
+        guard let startTime = UserDefaults.standard.object(forKey: timerStartTimeKey) as? Date,
+              let duration = UserDefaults.standard.integer(forKey: timerDurationKey) as? Int,
+              duration > 0 else { return }
+
+        let elapsed = Int(Date().timeIntervalSince(startTime))
+        let remaining = duration - elapsed
+        if remaining > 0 {
+            setAndStartTimer(remaining)
+        } else {
+            UserDefaults.standard.removeObject(forKey: timerStartTimeKey)
+            UserDefaults.standard.removeObject(forKey: timerDurationKey)
+        }
+    }
+
     @objc private func updateTime() {
         if remainingTime > 0 {
             remainingTime -= 1
             updateTimerLabel()
         } else {
             timer?.invalidate()
-            countdownPicker.isHidden = false  // shows picker when countdown finishes
+            UserDefaults.standard.removeObject(forKey: timerStartTimeKey)
+            UserDefaults.standard.removeObject(forKey: timerDurationKey)
+            ai_model.notifyUserTimerFinished()
         }
     }
 
-    // updates our label with time
     private func updateTimerLabel() {
         let hours = remainingTime / 3600
         let minutes = (remainingTime % 3600) / 60
         let seconds = remainingTime % 60
-        timerLabel.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        print(String(format: "%02d:%02d:%02d", hours, minutes, seconds))
+        if timerLabel != nil {
+            timerLabel.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        }
     }
 }

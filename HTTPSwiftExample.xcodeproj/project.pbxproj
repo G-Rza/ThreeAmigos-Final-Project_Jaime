@@ -8,32 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		027CF7592B07765F006BC492 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CF7582B07765F006BC492 /* SpeechRecognizer.swift */; };
+		A84DF6BE2B2872BC00458113 /* aiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DF6BD2B2872BC00458113 /* aiModel.swift */; };
 		A89699152B269DE00021EC48 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89699142B269DE00021EC48 /* InitialViewController.swift */; };
 		A89699172B269DFA0021EC48 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89699162B269DFA0021EC48 /* NotesViewController.swift */; };
 		A896991B2B269E120021EC48 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A896991A2B269E120021EC48 /* TimerViewController.swift */; };
 		A8F294BE2B26D00600B2F9E3 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F294BD2B26D00600B2F9E3 /* ReminderViewController.swift */; };
 		A8F294C02B26F79400B2F9E3 /* EditReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F294BF2B26F79400B2F9E3 /* EditReminderViewController.swift */; };
+		A8F294C22B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A8F294C12B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel */; };
 		B67483DB1ACA2D6800A9970E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67483DA1ACA2D6800A9970E /* AppDelegate.swift */; };
 		B67483E01ACA2D6800A9970E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67483DE1ACA2D6800A9970E /* Main.storyboard */; };
 		B67483E21ACA2D6800A9970E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67483E11ACA2D6800A9970E /* Images.xcassets */; };
 		B67483E51ACA2D6800A9970E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67483E31ACA2D6800A9970E /* LaunchScreen.xib */; };
-		F2AE41102B2825C300B4F667 /* AppleTopicsTC.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = F2AE410F2B2825C300B4F667 /* AppleTopicsTC.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		027CF7582B07765F006BC492 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		A84DF6BD2B2872BC00458113 /* aiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aiModel.swift; sourceTree = "<group>"; };
 		A89699142B269DE00021EC48 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		A89699162B269DFA0021EC48 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		A896991A2B269E120021EC48 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		A8F294BD2B26D00600B2F9E3 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		A8F294BF2B26F79400B2F9E3 /* EditReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReminderViewController.swift; sourceTree = "<group>"; };
+		A8F294C12B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AppleTopicsTC.mlmodel; sourceTree = SOURCE_ROOT; };
 		B67483D51ACA2D6800A9970E /* HTTPSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67483D91ACA2D6800A9970E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67483DA1ACA2D6800A9970E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67483DF1ACA2D6800A9970E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B67483E11ACA2D6800A9970E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B67483E41ACA2D6800A9970E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F2AE410F2B2825C300B4F667 /* AppleTopicsTC.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = AppleTopicsTC.mlpackage; path = ../../../Downloads/AppleTopicsTC.mlpackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,8 @@
 				A8F294BD2B26D00600B2F9E3 /* ReminderViewController.swift */,
 				A8F294BF2B26F79400B2F9E3 /* EditReminderViewController.swift */,
 				B67483DE1ACA2D6800A9970E /* Main.storyboard */,
-				F2AE410F2B2825C300B4F667 /* AppleTopicsTC.mlpackage */,
+				A8F294C12B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel */,
+				A84DF6BD2B2872BC00458113 /* aiModel.swift */,
 			);
 			path = HTTPSwiftExample;
 			sourceTree = "<group>";
@@ -163,10 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F294C22B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel in Sources */,
 				A89699152B269DE00021EC48 /* InitialViewController.swift in Sources */,
 				A89699172B269DFA0021EC48 /* NotesViewController.swift in Sources */,
+				A84DF6BE2B2872BC00458113 /* aiModel.swift in Sources */,
 				A8F294BE2B26D00600B2F9E3 /* ReminderViewController.swift in Sources */,
-				F2AE41102B2825C300B4F667 /* AppleTopicsTC.mlpackage in Sources */,
 				A896991B2B269E120021EC48 /* TimerViewController.swift in Sources */,
 				A8F294C02B26F79400B2F9E3 /* EditReminderViewController.swift in Sources */,
 				027CF7592B07765F006BC492 /* SpeechRecognizer.swift in Sources */,

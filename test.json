@@ -1,0 +1,37 @@
+[{
+    "text" : "Set a timer for 22 minutes",
+    "label" : "timer"
+},
+{
+    "text" : "Set a timer for nine minutes",
+    "label" : "timer"
+},
+{
+    "text" : "Set a timer for 120 minutes",
+    "label" : "timer"
+},
+{
+    "text" : "Remind me to wash my hair in 30 minutes",
+    "label" : "reminder"
+},
+{
+    "text" : "Remind me that i need to get my engine checked in 1 day",
+    "label" : "reminder"
+},
+{
+    "text" : "Remind me to get some dinner in thirty minutes",
+    "label" : "reminder"
+},
+{
+    "text" : "Make a note to play with my dogs",
+    "label" : "note"
+},
+{
+    "text" : "Make a note that objects in the mirror may be closer than they appear",
+    "label" : "note"
+},
+{
+    "text" : "Make a note to find some time for video games with the boys tomorrow",
+    "label" : "note"
+}
+]
