@@ -8,61 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Edit Reminder View Controller-->
-        <scene sceneID="oKb-RX-eNU">
-            <objects>
-                <viewController storyboardIdentifier="EditReminderViewController" id="pig-Nv-1Wy" customClass="EditReminderViewController" customModule="HTTPSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OiL-br-RDb"/>
-                        <viewControllerLayoutGuide type="bottom" id="GkM-ML-Vg1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dea-Dt-Ok6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHa-ov-J6C">
-                                <rect key="frame" x="317" y="63" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonTapped:" destination="pig-Nv-1Wy" eventType="touchUpInside" id="IQc-EY-SvA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwL-Cz-NBr">
-                                <rect key="frame" x="20" y="63" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Cancel">
-                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="cancelButtonTapped:" destination="pig-Nv-1Wy" eventType="touchUpInside" id="1nW-rd-udd"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lui-Cv-rUN">
-                                <rect key="frame" x="23" y="101" width="368" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9qs-yn-S9O">
-                                <rect key="frame" x="82" y="143" width="251" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="datePicker" destination="9qs-yn-S9O" id="B2E-vv-R94"/>
-                        <outlet property="reminderTextField" destination="lui-Cv-rUN" id="Z8c-sR-jG9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ImU-3V-tUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1902.8985507246377" y="375"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="6rc-IL-pn0">
             <objects>
@@ -82,7 +27,6 @@
         <!--InitialViewController-->
         <scene sceneID="3q5-DT-Yth">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tUA-iM-xFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="InitialViewController" id="Tth-b8-8tA" customClass="InitialViewController" customModule="HTTPSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aqm-Kl-zhT"/>
@@ -159,6 +103,7 @@
                         <outlet property="transcriptTextView" destination="UvZ-Gy-hvg" id="pCQ-g4-Dvo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUA-iM-xFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="311.59420289855075" y="-341.51785714285711"/>
         </scene>
@@ -175,11 +120,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dp2-nA-ptO">
-                                <rect key="frame" x="20" y="94.333333333333314" width="374" height="734.66666666666674"/>
+                                <rect key="frame" x="20" y="108" width="374" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I73-0K-lD9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I73-0K-lD9">
                                 <rect key="frame" x="294" y="57" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UZc-UK-DHQ"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="New Note"/>
@@ -190,12 +138,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Dp2-nA-ptO" firstAttribute="top" secondItem="I73-0K-lD9" secondAttribute="bottom" constant="8" id="4dC-Dd-Kb6"/>
-                            <constraint firstItem="I73-0K-lD9" firstAttribute="top" secondItem="Zt8-gC-rZK" secondAttribute="bottom" constant="52" id="8uB-d7-Tq2"/>
-                            <constraint firstItem="I73-0K-lD9" firstAttribute="trailing" secondItem="Dp2-nA-ptO" secondAttribute="trailing" id="SwA-nj-ZHQ"/>
+                            <constraint firstItem="I73-0K-lD9" firstAttribute="trailing" secondItem="Dp2-nA-ptO" secondAttribute="trailing" id="4an-bo-lVZ"/>
+                            <constraint firstItem="I73-0K-lD9" firstAttribute="top" secondItem="Zt8-gC-rZK" secondAttribute="bottom" constant="57" id="ETM-BY-Mkv"/>
+                            <constraint firstItem="Dp2-nA-ptO" firstAttribute="top" secondItem="I73-0K-lD9" secondAttribute="bottom" constant="21" id="M9N-le-oq3"/>
+                            <constraint firstItem="I73-0K-lD9" firstAttribute="trailing" secondItem="pVh-5e-SIP" secondAttribute="trailingMargin" id="Pgk-nA-Al7"/>
                             <constraint firstItem="Dp2-nA-ptO" firstAttribute="leading" secondItem="pVh-5e-SIP" secondAttribute="leadingMargin" id="ZHD-fd-Sf1"/>
                             <constraint firstItem="kFc-5d-HPf" firstAttribute="top" secondItem="Dp2-nA-ptO" secondAttribute="bottom" constant="8" id="gZR-vB-FHO"/>
-                            <constraint firstItem="I73-0K-lD9" firstAttribute="trailing" secondItem="pVh-5e-SIP" secondAttribute="trailingMargin" id="vri-xL-wb1"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -217,9 +165,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

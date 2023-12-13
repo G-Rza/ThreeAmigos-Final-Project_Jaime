@@ -113,8 +113,8 @@ class aiModel {
         let controller = TimerViewController()
         print(final_time)
         controller.setAndStartTimer(final_time)
-        self.speakOutput("Timer started.")
-        return "Timer started."
+        self.speakOutput("Timer started. I will notify you in \(timeValue) minutes.")
+        return "Timer started. I will notify you in \(timeValue) minutes."
     }
     // remind me to do something..reminder content and time in Minutes, hours, days.
     // "Remind me that/to <text> in X Y" E.g., "Remind me to make dinner in 4 hours"
@@ -160,8 +160,9 @@ class aiModel {
     func handleNoteInput(_ input: String) -> String {
         let words = input.split(separator: " ")
         let noteContent = words.dropFirst(4).joined(separator: " ")
-        let controller = NotesViewController()
-        controller.saveNewNote(noteContent)
+        guard !noteContent.isEmpty else { return "I'm sorry, I ran into an error."}
+        notes.append(noteContent)
+        UserDefaults.standard.set(notes, forKey: notesKey)
         self.speakOutput("Note created.")
         return "Note created."
     }

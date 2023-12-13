@@ -8,12 +8,12 @@
 
 import UIKit
 
+let notesKey = "notesKey"
+var notes: [String] = []
+
 class NotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    private let notesKey = "notesKey"
-    private var notes: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +108,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     // saves new note in table
-    public func saveNewNote(_ note: String) {
+    private func saveNewNote(_ note: String) {
         guard !note.isEmpty else { return }
         notes.append(note)
         UserDefaults.standard.set(notes, forKey: notesKey)
