@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,7 +30,7 @@
 		A8F294BD2B26D00600B2F9E3 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		A8F294BF2B26F79400B2F9E3 /* EditReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReminderViewController.swift; sourceTree = "<group>"; };
 		A8F294C12B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AppleTopicsTC.mlmodel; sourceTree = SOURCE_ROOT; };
-		B67483D51ACA2D6800A9970E /* HTTPSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67483D51ACA2D6800A9970E /* Three Amigos Artifical Intelligence Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Three Amigos Artifical Intelligence Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67483D91ACA2D6800A9970E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67483DA1ACA2D6800A9970E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67483DF1ACA2D6800A9970E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		B67483CC1ACA2D6800A9970E = {
 			isa = PBXGroup;
 			children = (
-				B67483D71ACA2D6800A9970E /* Three Amigos Aritical Intelligence Assistant */,
+				B67483D71ACA2D6800A9970E /* Three Amigos Artifical Intelligence Assistant */,
 				B67483D61ACA2D6800A9970E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,12 +60,12 @@
 		B67483D61ACA2D6800A9970E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B67483D51ACA2D6800A9970E /* HTTPSwiftExample.app */,
+				B67483D51ACA2D6800A9970E /* Three Amigos Artifical Intelligence Assistant.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B67483D71ACA2D6800A9970E /* Three Amigos Aritical Intelligence Assistant */ = {
+		B67483D71ACA2D6800A9970E /* Three Amigos Artifical Intelligence Assistant */ = {
 			isa = PBXGroup;
 			children = (
 				B67483DA1ACA2D6800A9970E /* AppDelegate.swift */,
@@ -82,7 +82,7 @@
 				A8F294C12B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel */,
 				A84DF6BD2B2872BC00458113 /* aiModel.swift */,
 			);
-			path = "Three Amigos Aritical Intelligence Assistant";
+			path = "Three Amigos Artifical Intelligence Assistant";
 			sourceTree = "<group>";
 		};
 		B67483D81ACA2D6800A9970E /* Supporting Files */ = {
@@ -96,9 +96,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B67483D41ACA2D6800A9970E /* HTTPSwiftExample */ = {
+		B67483D41ACA2D6800A9970E /* Three Amigos Artifical Intelligence Assistant */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B67483F41ACA2D6800A9970E /* Build configuration list for PBXNativeTarget "HTTPSwiftExample" */;
+			buildConfigurationList = B67483F41ACA2D6800A9970E /* Build configuration list for PBXNativeTarget "Three Amigos Artifical Intelligence Assistant" */;
 			buildPhases = (
 				B67483D11ACA2D6800A9970E /* Sources */,
 				B67483D21ACA2D6800A9970E /* Frameworks */,
@@ -108,9 +108,9 @@
 			);
 			dependencies = (
 			);
-			name = HTTPSwiftExample;
+			name = "Three Amigos Artifical Intelligence Assistant";
 			productName = HTTPSwiftExample;
-			productReference = B67483D51ACA2D6800A9970E /* HTTPSwiftExample.app */;
+			productReference = B67483D51ACA2D6800A9970E /* Three Amigos Artifical Intelligence Assistant.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +119,9 @@
 		B67483CD1ACA2D6800A9970E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Eric Larson";
 				TargetAttributes = {
 					B67483D41ACA2D6800A9970E = {
@@ -134,7 +136,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -143,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B67483D41ACA2D6800A9970E /* HTTPSwiftExample */,
+				B67483D41ACA2D6800A9970E /* Three Amigos Artifical Intelligence Assistant */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +234,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -289,6 +291,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -300,7 +303,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -310,9 +314,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F69WJ27LN4;
-				INFOPLIST_FILE = HTTPSwiftExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "Three Amigos Artifical Intelligence Assistant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SMU.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -324,9 +331,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = APD62CDC25;
-				INFOPLIST_FILE = HTTPSwiftExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "Three Amigos Artifical Intelligence Assistant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SMU.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -345,7 +355,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B67483F41ACA2D6800A9970E /* Build configuration list for PBXNativeTarget "HTTPSwiftExample" */ = {
+		B67483F41ACA2D6800A9970E /* Build configuration list for PBXNativeTarget "Three Amigos Artifical Intelligence Assistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B67483F51ACA2D6800A9970E /* Debug */,

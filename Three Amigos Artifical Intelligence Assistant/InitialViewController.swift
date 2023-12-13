@@ -6,6 +6,9 @@
 //  Copyright © 2023 Eric Larson. All rights reserved.
 //
 
+
+// Project created by Hans Soland, Jamie Garza, & Bryce Shurts
+
 import UIKit
 
 
@@ -59,7 +62,6 @@ class InitialViewController: UIViewController {
         func updateTranscript(with text: String) {
             DispatchQueue.main.async { [weak self] in
                 self?.transcriptTextView.text += "\n" + text
-                print(self!.transcriptTextView.text!)
                 self?.scrollToBottom()
             }
         }

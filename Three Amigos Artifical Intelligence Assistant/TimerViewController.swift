@@ -90,7 +90,6 @@ class TimerViewController: UIViewController {
         let hours = remainingTime / 3600
         let minutes = (remainingTime % 3600) / 60
         let seconds = remainingTime % 60
-        print(String(format: "%02d:%02d:%02d", hours, minutes, seconds))
         if timerLabel != nil {
             timerLabel.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
         }

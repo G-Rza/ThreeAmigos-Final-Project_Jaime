@@ -111,7 +111,6 @@ class aiModel {
         let final_time = Int(timeValue * 60) // Assuming input is in minutes
         // Set a timer
         let controller = TimerViewController()
-        print(final_time)
         controller.setAndStartTimer(final_time)
         self.speakOutput("Timer started. I will notify you in \(timeValue) minutes.")
         return "Timer started. I will notify you in \(timeValue) minutes."
