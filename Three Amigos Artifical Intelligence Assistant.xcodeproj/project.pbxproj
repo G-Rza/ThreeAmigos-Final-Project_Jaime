@@ -52,7 +52,7 @@
 		B67483CC1ACA2D6800A9970E = {
 			isa = PBXGroup;
 			children = (
-				B67483D71ACA2D6800A9970E /* HTTPSwiftExample */,
+				B67483D71ACA2D6800A9970E /* Three Amigos Aritical Intelligence Assistant */,
 				B67483D61ACA2D6800A9970E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B67483D71ACA2D6800A9970E /* HTTPSwiftExample */ = {
+		B67483D71ACA2D6800A9970E /* Three Amigos Aritical Intelligence Assistant */ = {
 			isa = PBXGroup;
 			children = (
 				B67483DA1ACA2D6800A9970E /* AppDelegate.swift */,
@@ -82,7 +82,7 @@
 				A8F294C12B282AAE00B2F9E3 /* AppleTopicsTC.mlmodel */,
 				A84DF6BD2B2872BC00458113 /* aiModel.swift */,
 			);
-			path = HTTPSwiftExample;
+			path = "Three Amigos Aritical Intelligence Assistant";
 			sourceTree = "<group>";
 		};
 		B67483D81ACA2D6800A9970E /* Supporting Files */ = {
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B67483D01ACA2D6800A9970E /* Build configuration list for PBXProject "HTTPSwiftExample" */;
+			buildConfigurationList = B67483D01ACA2D6800A9970E /* Build configuration list for PBXProject "Three Amigos Artifical Intelligence Assistant" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -336,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B67483D01ACA2D6800A9970E /* Build configuration list for PBXProject "HTTPSwiftExample" */ = {
+		B67483D01ACA2D6800A9970E /* Build configuration list for PBXProject "Three Amigos Artifical Intelligence Assistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B67483F21ACA2D6800A9970E /* Debug */,
